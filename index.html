@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="a">
+    <h1><marquee behavior="" direction="right">calculate your percentage:::::calculate your percentage::::::calculate your percentage </marquee></h1><h1><marquee behavior="" direction="left">calculate your percentage:::::calculate your percentage::::::calculate your percentage </marquee></h1>
+    <center> <h1 class="head">CHECKING GRADE AND PERCENTAGE</h1>
+    <form onsubmit= "dopercentage() ; return false">
+      
+        <h3 class="headtwo">OBTAINED MARKS</h3>:
+        <br><br> <input type="number" id="num1" placeholder="enter your obtained mark">
+        <br>
+        <br>
+        <h3 class="headtwo">TOTAL NUMBER:</h3>
+        <br><br> <input type="number" id="num2" placeholder="enter the total number ">
+        <br>
+        <br>
+       <button type="submit"> click this button</button><br><br>
+       <button type="reset">reset this</button>
+ </form>
+     <h3 class="result">your percentage is </h3>
+     <h3 id="result" class="result" ></h3>
+    <br> <h3 class="result">your grade is </h3>
+     <h3 id="grade" class="result"></h3></center>
+     <script>
+        function dopercentage()
+        {
+            let firstnumber= (+document.querySelector('#num1').value)
+            let secondnumber = (+document.querySelector('#num2').value)
+            let percentage = (firstnumber*100)/secondnumber
+        document.querySelector("#result").innerHTML=percentage
+           if (percentage>=90){
+            g="A1 grade"
+            document.querySelector("#grade").innerHTML=g
+        }else if(percentage<=89 && percentage>=80){
+           g="A grade"
+           document.querySelector("#grade").innerHTML=g
+        } 
+         else if(percentage<=79 && percentage>=70){
+           g="B grade"
+           document.querySelector("#grade").innerHTML=g
+        } 
+        else if(percentage<=69 && percentage>=60){
+           g="C grade"
+           document.querySelector("#grade").innerHTML=g
+        } 
+        else if(percentage<=59 && percentage>=50){
+           g="D grade"
+           document.querySelector("#grade").innerHTML=g
+        } 
+        else if(percentage<=49 && percentage>=40){
+           g="E grade"
+           document.querySelector("#grade").innerHTML=g
+        } 
+        else if(percentage<=39 && percentage>=0){
+           g="Fail broo"
+           document.querySelector("#grade").innerHTML=g
+        
+            
+        }
+    }     
+     </script>
+<h1><marquee behavior="" direction="right">calculate your percentage:::::calculate your percentage::::::calculate your percentage</marquee></h1>
+</div>
+</body>
+</html>
